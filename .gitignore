@@ -6,5 +6,5 @@
 .DS_Store
 .long-description.html
 dist
-hexagonit/socialbutton/docs/_build/*
+src/hexagonit/socialbutton/docs/_build/*
 setup.cfg
