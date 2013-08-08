@@ -28,7 +28,7 @@ Go to Social Button Code Setting and add button::
 
     >>> print browser.bycss('#crud-edit-button1-widgets-code_id')
     --- 1 ---
-    <span id="crud-edit-button1-widgets-code_id" class="text-widget required textline-field">button1</span>
+    <span id="crud-edit-button1-widgets-code_id" class="text-widget textline-field">button1</span>
 
     >>> print browser.bycss('#crud-edit-button1-widgets-code_text')
     --- 1 ---
@@ -44,7 +44,7 @@ Adding button with same ID will override the current values:
 
     >>> print browser.bycss('#crud-edit-button1-widgets-code_id')
     --- 1 ---
-    <span id="crud-edit-button1-widgets-code_id" class="text-widget required textline-field">button1</span>
+    <span id="crud-edit-button1-widgets-code_id" class="text-widget textline-field">button1</span>
 
     >>> print browser.bycss('#crud-edit-button1-widgets-code_text')
      --- 1 ---
