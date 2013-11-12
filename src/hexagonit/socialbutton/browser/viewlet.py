@@ -55,7 +55,8 @@ class SocialButtonsViewlet(ViewletBase):
         types = getToolByName(self.context, 'portal_types')
         for key in items:
             data = SocialButtonConfig(str(key), **items[key])
-            if u'*' not in data.content_types and types.getTypeInfo(self.context).id not in data.content_types:
+            typeinfo = types.getTypeInfo(self.context)
+            if typeinfo and u'*' not in data.content_types and typeinfo.id not in data.content_types:
                 continue
             if not data.enabled:
                 continue

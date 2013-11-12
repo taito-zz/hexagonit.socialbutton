@@ -1,6 +1,11 @@
 Change log
 ----------
 
+0.10.2 (2013-11-12)
+===================
+
+- Bug fix for context which does not have type info. [taito]
+
 0.10.1 (2013-08-08)
 ===================
 
