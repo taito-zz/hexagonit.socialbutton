@@ -16,11 +16,4 @@
     name="lang_country"
     />
 
-  <adapter
-    for="*"
-    provides="plone.stringinterp.interfaces.IStringSubstitution"
-    factory=".dollar.PortalURL"
-    name="portal_url"
-    />
-
 </configure>

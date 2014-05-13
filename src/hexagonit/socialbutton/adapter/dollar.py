@@ -18,7 +18,6 @@ class AllContent(BaseSubstitution):
 
 
 class Lang(AllContent):
-    # grok.name('lang')
     description = _(u'Language code for the site.')
 
     def safe_call(self):
@@ -28,19 +27,8 @@ class Lang(AllContent):
 
 
 class LangCountry(AllContent):
-    # grok.name('lang_country')
     description = _(u'Locales such as fi_FI.')
 
     def safe_call(self):
         lang = getAdapter(self.context, IStringSubstitution, name="lang")()
         return '{0}_{1}'.format(lang, LANGUAGE_COUNTRY[lang])
-
-
-class PortalURL(AllContent):
-    # grok.name('portal_url')
-    description = _(u'Portal URL.')
-
-    def safe_call(self):
-        portal_state = getMultiAdapter(
-            (self.context, self.context.REQUEST), name='plone_portal_state')
-        return portal_state.portal_url()

@@ -32,7 +32,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'plone.stringinterp',
+        'plone.stringinterp >= 1.0.11',
         'setuptools'],
     extras_require={'test': ['hexagonit.testing']},
     entry_points="""
